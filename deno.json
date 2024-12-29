@@ -1,0 +1,10 @@
+{
+  "tasks": {
+    "render": "deno run --allow-all render.ts src/resume.html resume.pdf"
+  },
+  "imports": {
+    "puppeteer": "npm:puppeteer@23.11.1",
+    "@std/path": "jsr:@std/path@1.0.8"
+  },
+  "nodeModulesDir": "auto"
+}
