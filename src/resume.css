@@ -1,10 +1,16 @@
+:root {
+  --page-margin: 0.4in;
+  --header-font: "Space Grotesk";
+  --body-font: "Inter";
+}
+
 body {
-  margin: 0;
+  margin: 0in;
 }
 
 @page {
   size: Letter;
-  margin: 0.5in;
+  margin: var(--page-margin);
 }
 
 @media screen {
@@ -15,8 +21,7 @@ body {
   }
 
   body {
-    width: 7.5in;
-    margin: 0.2in;
+    width: calc(8in - var(--page-margin) + 0.1in);
   }
 }
 
@@ -25,11 +30,11 @@ header {
 }
 
 h1, h2, p, div, ul, ol {
-  margin: 3px 0px;
+  margin: 0pt 0pt;
 }
 
 h1, h2 {
-  font-family: 'Space Grotesk';
+  font-family: var(--header-font);
 }
 
 h1 {
@@ -42,7 +47,7 @@ h2 {
 }
 
 p, div, ul, ol {
-  font-family: Inter;
+  font-family: var(--body-font);
   font-size: 10pt;
 }
 
@@ -59,6 +64,15 @@ hr {
 .item-date {
   float: right;
   text-align: right;
+}
+
+.item-tagline {
+  font-style: italic;
+}
+
+.item-tagline::before {
+  content: " | ";
+  font-style: normal;
 }
 
 table {
